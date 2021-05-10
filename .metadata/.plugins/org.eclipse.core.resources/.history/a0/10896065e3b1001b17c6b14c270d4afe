@@ -1,0 +1,75 @@
+package jeankoval.com.github.classes;
+
+public class Carro {
+	
+	private String modelo;
+	private String cor;
+	private Integer ano;
+	private String marca;
+	private String chassi;
+	private String prop;
+	private Integer veloMaxima;
+	private Integer veloAtual;
+	private Integer numPortas;
+	private boolean teto;
+	private Integer numMarchas;
+	private Integer marchaAtual;
+	private boolean automatico;
+	private Integer volComb;
+	
+	public Carro(String prop) {
+		this.prop = prop;
+		this.ano = 0;
+		this.veloMaxima = 100;
+		this.velocidadeAtual = 0;
+		this.volumeCombustivel = 0;
+		this.marcha = 0;
+		this.marchas = 6;
+		this.numeroPortas = 2;
+		this.chassi = "0";
+		this.modelo = "0";
+		this.cor = "0";
+		this.marca = "0";
+		this.cambioAutomatico = "N";
+		this.tetoSolar = false;
+	}
+
+	public void acelera() {
+		if(this.veloAtual < this.veloMaxima) {
+			this.veloAtual += 1;
+		}else {
+			System.out.println("Voce já atingiu a velocidade máxima! Aceleração não permitida.");
+		}
+		
+	}
+	
+	public void freia() {
+		this.veloAtual = 0;
+	}
+	
+	public void sobeMarcha() {
+		if(this.marchaAtual > numMarchas) {
+			this.marchaAtual += 1;
+		}else {
+			System.out.println("Excedeu o número maximo de marchas a desenvolver.");
+		}
+	}
+	
+	public void desceMarcha() {
+		if(this.marchaAtual > 1) {
+			this.marchaAtual -= 1;
+		}else {
+			System.out.println("Voce já está em primeira marcha.");
+		}
+	}
+	
+	public void marchaRe() {
+		if(this.veloAtual == 0) {
+			this.marchaAtual = this.numMarchas;
+		}else {
+			System.out.println("Marchar ré não pode ser engatada com o veiculo em movimento.");
+		}
+		
+	}
+
+}

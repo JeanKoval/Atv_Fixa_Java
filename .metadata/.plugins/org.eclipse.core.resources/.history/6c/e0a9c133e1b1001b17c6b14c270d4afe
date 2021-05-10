@@ -1,0 +1,36 @@
+package jeankoval.com.github.classes;
+
+public class Carro {
+	
+	private String modelo;
+	private String cor;
+	private Integer ano;
+	private String marca;
+	private String chassi;
+	private String prop;
+	private Integer veloMaxima;
+	private Integer veloAtual;
+	private Integer numPortas;
+	private boolean teto;
+	private Integer numMarchas;
+	private Integer marchaAtual;
+	private boolean automatico;
+	private Integer volComb;
+	
+	public void acelera() {
+		this.veloAtual += 1;
+	}
+	
+	public void freia() {
+		this.veloAtual = 0;
+	}
+	
+	public void sobeMarcha() {
+		this.marchaAtual += 1;
+	}
+	
+	public void desceMarcha() {
+		this.marchaAtual -= 1;
+	}
+
+}

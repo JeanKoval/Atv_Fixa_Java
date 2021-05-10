@@ -1,0 +1,14 @@
+package jeankoval.com.github.programa;
+
+import jeankoval.com.github.classes.Endereco;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Endereco end = new Endereco('Agenor Ramiro dos Anjos', 43, 'Sitio Cercado', 'Curitiba', 'Paraná', '81920415', 'Casa');
+		
+
+	}
+
+}

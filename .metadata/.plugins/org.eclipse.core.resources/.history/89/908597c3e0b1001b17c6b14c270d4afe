@@ -1,0 +1,23 @@
+package jeankoval.com.github.classes;
+
+public class Proprietario {
+	
+	private String nome;
+	private String cpf;
+	private String rg;
+	private String dataNasc;
+	private String rua;
+	private String bairro;
+	private String cidade;
+	private String estado;
+	private String cep;
+	private String complemento;
+	
+	public Proprietario(String cpf, String rg) {
+		this.cpf = cpf;
+		this.rg = rg;
+	}
+	
+	
+
+}
