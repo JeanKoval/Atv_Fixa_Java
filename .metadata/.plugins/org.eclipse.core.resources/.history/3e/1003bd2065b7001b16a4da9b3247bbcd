@@ -1,0 +1,14 @@
+package jeankoval.com.github.programa;
+
+public class teste {
+
+	public static void main(String[] args) {
+		public String texto;
+		
+		texto = "Mensagem";
+		
+		System.out.println(texto);
+
+	}
+
+}

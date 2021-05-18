@@ -1,0 +1,15 @@
+package jeankoval.com.github.programa;
+
+public class teste {
+
+	public static void main(String[] args) {
+		String texto;
+		
+		texto = "Mensagem";
+		
+		System.out.println(texto);
+		System.out.println(texto.substring(1, 3));
+
+	}
+
+}

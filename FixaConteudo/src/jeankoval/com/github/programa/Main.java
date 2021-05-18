@@ -10,14 +10,17 @@ public class Main {
 		
 		Endereco end = new Endereco("Agenor Ramiro dos Anjos", 43, "Sitio Cercado", "Curitiba", "Paraná", "81920415", "Casa");
 		
-		Proprietario prop = new Proprietario("12345678912", "1234567891", end);
-		prop.setNome("Jean Carlos Koval");
+		Proprietario prop = new Proprietario("Jean carlos Koval","12345678911", "1234567891", end);
 		
-		Carro carro = new Carro(prop.getNome());
+		Carro carro = new Carro(prop);
 		
-		System.out.println("O Proprietário: " + prop.getNome());
-		end.toString();
-		System.out.println("É dono do veiculo "+ carro.getMarca() +" "+carro.getModelo()+" "+ carro.getCor());
+		System.out.println("Proprietário: " + carro.getProp().getNome());
+		System.out.println(end.toString());
+		System.out.println(carro.toString());
+		
+		System.out.println("CPF Ajustado: "+prop.cpf());
+		
+		System.out.println("Rua do Proprietário: "+ carro.getProp().getEndereco().getRua());
 
 	}
 

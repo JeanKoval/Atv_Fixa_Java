@@ -7,7 +7,6 @@ public class Carro {
 	private Integer ano;
 	private String marca;
 	private String chassi;
-	private String prop;
 	private Integer veloMaxima;
 	private Integer veloAtual;
 	private Integer numPortas;
@@ -16,8 +15,9 @@ public class Carro {
 	private Integer marchaAtual;
 	private boolean automatico;
 	private Integer volComb;
+	private Proprietario prop;
 	
-	public Carro(String prop) {
+	public Carro(Proprietario prop) {
 		this.prop = prop;
 		this.ano = 2001;
 		this.veloMaxima = 120;
@@ -70,6 +70,21 @@ public class Carro {
 			System.out.println("Marchar ré não pode ser engatada com o veiculo em movimento.");
 		}		
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder dadosCarro = new StringBuilder();
+		dadosCarro.append("Veiculo: Marca "+ this.marca +", modelo "+ this.modelo +", cor "+ this.cor +" do ano de "+ this.ano);
+		return dadosCarro.toString();
+	}
+	
+	public void setProp(Proprietario prop) {
+		this.prop = prop;
+	}
+	
+	public Proprietario getProp() {
+		return prop;
+	}
 
 	public String getModelo() {	return modelo; }
 	public void setModelo(String modelo) {	this.modelo = modelo; }
@@ -85,9 +100,6 @@ public class Carro {
 
 	public String getChassi() {	return chassi;	}
 	public void setChassi(String chassi) {	this.chassi = chassi;	}
-
-	public String getProp() {	return prop;	}
-	public void setProp(String prop) {	this.prop = prop;	}
 
 	public Integer getVeloMaxima() {	return veloMaxima;	}
 	public void setVeloMaxima(Integer veloMaxima) {	this.veloMaxima = veloMaxima;	}
